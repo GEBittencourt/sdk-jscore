@@ -1,0 +1,248 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@gebittencourt/sdk-jsddd</title>
+	<meta name="description" content="Documentation for @gebittencourt/sdk-jsddd">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">@gebittencourt/sdk-jsddd</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>@gebittencourt/sdk-jsddd</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#software-development-kit---javascript-ddd" id="software-development-kit---javascript-ddd" style="color: inherit; text-decoration: none;">
+					<h1>Software Development Kit - Javascript DDD</h1>
+				</a>
+				<p>Conjunto de utilitários para aplicações javascript com abordagens de Domain-Driven Design.</p>
+				<a href="#abstrações-de-domínio" id="abstrações-de-domínio" style="color: inherit; text-decoration: none;">
+					<h2>Abstrações de domínio</h2>
+				</a>
+				<p>Objetos de valor, entidades, agregados, eventos de domínio, indicam o valor das classes no domínio e cada uma possui um objetivo específico. Sendo assim, algumas abstrações estão disponíveis neste SDK, afim de facilitar o entendimento e implementação das classes no domínio.</p>
+				<a href="#objeto-de-valor" id="objeto-de-valor" style="color: inherit; text-decoration: none;">
+					<h3>Objeto de valor</h3>
+				</a>
+				<p>Classe abstrata apenas informativa: <code>ValueObject</code>.</p>
+				<a href="#entidade" id="entidade" style="color: inherit; text-decoration: none;">
+					<h3>Entidade</h3>
+				</a>
+				<p>Classe abstrata que contém uma propriedade de identificação (<code>id</code>) com o validador <code>NotBlank</code> (não permitindo informação nula, indefinida ou vazia): <code>Entity</code>.</p>
+				<a href="#evento-de-domínio" id="evento-de-domínio" style="color: inherit; text-decoration: none;">
+					<h3>Evento de domínio</h3>
+				</a>
+				<p>Classe abstrata que contém uma propriedade abstrata forçando a indicação da versão do evento (<code>eventVersion</code>) e uma propriedade que indica a data em que o evento ocorreu (<code>occurredOn</code>) sendo automaticamente definida como a data atual no construtor.</p>
+				<a href="#agregado" id="agregado" style="color: inherit; text-decoration: none;">
+					<h3>Agregado</h3>
+				</a>
+				<p>Classe abstrata apenas informativa que extende de uma entidade: <code>Aggregate</code>.</p>
+				<a href="#validações" id="validações" style="color: inherit; text-decoration: none;">
+					<h2>Validações</h2>
+				</a>
+				<blockquote>
+					<p><em>A principal razão para usar a validação no modelo é para verificar a exatidão de qualquer um atributo/propriedade, qualquer objeto inteiro ou qualquer composição de objetos. <a href="https://books.google.com/books/about/Implementando_Domain_Driven_Design.html?id=zc9KvgAACAAJ&amp;source=kp_book_description">Implementando Domain-Driven Design</a>. </em></p>
+				</blockquote>
+				<a href="#validando-atributos-ou-propriedades-com-decoradores" id="validando-atributos-ou-propriedades-com-decoradores" style="color: inherit; text-decoration: none;">
+					<h3>Validando atributos ou propriedades com decoradores</h3>
+				</a>
+				<p>Para facilitar a implementação de validadores de atributos ou propriedades, é disponibilizado neste SDK, um conjunto de decoradores que definem restrições para estes.</p>
+				<blockquote>
+					<p><em>O Decorator é um padrão estrutural que permite adicionar novos comportamentos aos objetos dinamicamente, colocando-os dentro de objetos wrapper especiais. <a href="https://refactoring.guru/pt-br/design-patterns/decorator/typescript/example">Decorator em TypeScript</a>;
+					Veja também: <a href="https://www.typescriptlang.org/docs/handbook/decorators.html#decorators">Typescript Lang</a> | <a href="https://codeburst.io/decorate-your-code-with-typescript-decorators-5be4a4ffecb4">Decorate your code with TypeScript decorators</a>.</em></p>
+				</blockquote>
+				<p>Ao decorar um atributo ou propriedade com um ou mais decoradores de restrições, você apenas define quais validações deverão ser aplicadas, porém, apenas será realizada a validação quando for invocado o método <code>validate</code> do utilitário <code>ConstraintValidation</code> para o objeto, ficando a critério do desenvolvedor realizar a validação no construtor, fábrica ou método específico. Também fica a critério do desenvolvedor o tratamento das validações, lançando um erro ou não, por exemplo, com o resultado do método <code>validate</code>.</p>
+				<table>
+					<thead>
+						<tr>
+							<th><em>Decorator</em></th>
+							<th>Validação</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td>@Valid</td>
+							<td>Marca uma propriedade do tipo objeto para que também possua suas propriedades validadas em cascata.</td>
+						</tr>
+						<tr>
+							<td>@NotNull</td>
+							<td>Propriedade não deve ser nulo ou indefinido.</td>
+						</tr>
+						<tr>
+							<td>@NotBlank</td>
+							<td>Propriedade não deve ser nulo ou indefinido e deve conter, pelo menos, um caractere diferente de espaço em branco.</td>
+						</tr>
+						<tr>
+							<td>@Size</td>
+							<td>O tamanho da propriedade deve respeitar as condições passadas para o decorador.</td>
+						</tr>
+				</tbody></table>
+				<a href="#exemplo" id="exemplo" style="color: inherit; text-decoration: none;">
+					<h3>Exemplo</h3>
+				</a>
+				<pre><code class="language-typescript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Address</span> </span>{
+  <span class="hljs-meta">@NotBlank</span>()
+  <span class="hljs-attr">id</span>: <span class="hljs-built_in">string</span>;
+
+  <span class="hljs-meta">@NotNull</span>({
+    <span class="hljs-attr">message</span>: <span class="hljs-string">&#x27;Situation must not be null.&#x27;</span>,
+  })
+  <span class="hljs-attr">situation</span>: Situation;
+
+  <span class="hljs-meta">@Valid</span>()
+  <span class="hljs-attr">zipCode</span>: ZipCode;
+
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">id: <span class="hljs-built_in">string</span>, situation: Situation, zipCode: ZipCode</span>)</span> {
+    <span class="hljs-built_in">this</span>.id = id;
+    <span class="hljs-built_in">this</span>.situation = situation;
+    <span class="hljs-built_in">this</span>.zipCode = zipCode;
+    <span class="hljs-keyword">const</span> invalidConstraints = ConstraintValidation.validate(<span class="hljs-built_in">this</span>);
+    <span class="hljs-comment">// Você pode avaliar o resultado de `invalidConstraints` para lançar ou não uma exceção ou realizar outro tratamento...</span>
+  }
+}</code></pre>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-class">
+						<a href="classes/aggregate.html" class="tsd-kind-icon">Aggregate</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="classes/baseconstraint.html" class="tsd-kind-icon">Base<wbr>Constraint</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/constraintvalidation.html" class="tsd-kind-icon">Constraint<wbr>Validation</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/domainevent.html" class="tsd-kind-icon">Domain<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/entity.html" class="tsd-kind-icon">Entity</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/notblankconstraint.html" class="tsd-kind-icon">Not<wbr>Blank<wbr>Constraint</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/notnullconstraint.html" class="tsd-kind-icon">Not<wbr>Null<wbr>Constraint</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/validproperty.html" class="tsd-kind-icon">Valid<wbr>Property</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/valueobject.html" class="tsd-kind-icon">Value<wbr>Object</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="interfaces/constraint.html" class="tsd-kind-icon">Constraint</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/constraintconfiguration.html" class="tsd-kind-icon">Constraint<wbr>Configuration</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#constraintdecorator" class="tsd-kind-icon">Constraint<wbr>Decorator</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#listofconstraints" class="tsd-kind-icon">List<wbr>OfConstraints</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#notblank" class="tsd-kind-icon">Not<wbr>Blank</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#notnull" class="tsd-kind-icon">Not<wbr>Null</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#valid" class="tsd-kind-icon">Valid</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
