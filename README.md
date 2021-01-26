@@ -2,6 +2,26 @@
 
 Conjunto de utilitários para aplicações javascript com abordagens de Domain-Driven Design.
 
+## Abstrações de domínio
+
+Objetos de valor, entidades, agregados, eventos de domínio, indicam o valor das classes no domínio e cada uma possui um objetivo específico. Sendo assim, algumas abstrações estão disponíveis neste SDK, afim de facilitar o entendimento e implementação das classes no domínio.
+
+### Objeto de valor
+
+Classe abstrata apenas informativa: `ValueObject`.
+
+### Entidade
+
+Classe abstrata que contém uma propriedade de identificação (`id`) com o validador `NotBlank` (não permitindo informação nula, indefinida ou vazia): `Entity`.
+
+### Evento de domínio
+
+Classe abstrata que contém uma propriedade abstrata forçando a indicação da versão do evento (`eventVersion`) e uma propriedade que indica a data em que o evento ocorreu (`occurredOn`) sendo automaticamente definida como a data atual no construtor.
+
+### Agregado
+
+Classe abstrata apenas informativa que extende de uma entidade: `Aggregate`.
+
 ## Validações
 
 > <em>A principal razão para usar a validação no modelo é para verificar a exatidão de qualquer um atributo/propriedade, qualquer objeto inteiro ou qualquer composição de objetos. [Implementando Domain-Driven Design](https://books.google.com/books/about/Implementando_Domain_Driven_Design.html?id=zc9KvgAACAAJ&source=kp_book_description). </em>
@@ -20,7 +40,7 @@ Ao decorar um atributo ou propriedade com um ou mais decoradores de restrições
 | @Valid      | Marca uma propriedade do tipo objeto para que também possua suas propriedades validadas em cascata.                |
 | @NotNull    | Propriedade não deve ser nulo ou indefinido.                                                                       |
 | @NotBlank   | Propriedade não deve ser nulo ou indefinido e deve conter, pelo menos, um caractere diferente de espaço em branco. |
-| @Size       | O tamanho da propriedade deve respeitas as condições passadas para o decorador.                                    |
+| @Size       | O tamanho da propriedade deve respeitar as condições passadas para o decorador.                                    |
 
 ### Exemplo
 
