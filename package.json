@@ -5,7 +5,10 @@
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
-  "repository": "https://github.com/GEBittencourt/sdk-jsddd",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GEBittencourt/sdk-jsddd.git"
+  },
   "license": "MIT",
   "keywords": [
     "ddd",
@@ -100,5 +103,11 @@
     "exclude": [
       "**/*.spec.js"
     ]
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/GEBittencourt/sdk-jsddd/issues"
+  },
+  "homepage": "https://github.com/GEBittencourt/sdk-jsddd#readme",
+  "dependencies": {},
+  "author": "Guilherme Eduardo Bittencourt"
 }
