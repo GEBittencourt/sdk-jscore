@@ -1,18 +1,18 @@
-import { NotBlank } from '../validation';
+import { NotNull } from '../validation';
 
 /**
  * Represents a domain entity with identity
  */
-export abstract class Entity {
-  @NotBlank({
-    message: 'Entity.id.NotBlank',
+export abstract class Entity<Id> {
+  @NotNull({
+    message: 'Entity.id.NotNull',
   })
   /**
-   * Identity of entity. Contains a NotBlank validator.
+   * Identity of entity. Contains a NotNull validator.
    */
-  id: string;
+  id: Id;
 
-  constructor(id: string) {
+  constructor(id: Id) {
     this.id = id;
   }
 }

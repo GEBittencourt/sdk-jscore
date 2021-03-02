@@ -1,8 +1,8 @@
 import test from 'ava';
-import { ConstraintValidation, NotBlankConstraint } from '../validation';
+import { ConstraintValidation, NotNullConstraint } from '../validation';
 import { Entity } from './entity';
 
-class EntityClass extends Entity {
+class EntityClass extends Entity<string> {
   value: string;
 
   constructor(id: string, value: string) {
@@ -12,10 +12,10 @@ class EntityClass extends Entity {
 }
 
 test('should validate id property of entity', (t) => {
-  const entity = new EntityClass(' ', '');
+  const entity = new EntityClass(null, '');
   const constraints = ConstraintValidation.validate(entity);
   t.is(constraints.length, 1);
-  t.true(constraints[0] instanceof NotBlankConstraint);
-  const notBlankConstraint: NotBlankConstraint = constraints[0] as NotBlankConstraint;
-  t.is(notBlankConstraint.propertyKey, 'id');
+  t.true(constraints[0] instanceof NotNullConstraint);
+  const notNullConstraint: NotNullConstraint = constraints[0] as NotNullConstraint;
+  t.is(notNullConstraint.propertyKey, 'id');
 });

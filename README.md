@@ -12,7 +12,7 @@ Classe abstrata apenas informativa: `ValueObject`.
 
 ### Entidade
 
-Classe abstrata que contém uma propriedade de identificação (`id`) com o validador `NotBlank` (não permitindo informação nula, indefinida ou vazia): `Entity`.
+Classe abstrata que contém uma propriedade de identificação (`id`) com um tipo que deve ser indicado e com o validador `NotNull` (não permitindo informação nula ou indefinida): `Entity`.
 
 ### Evento de domínio
 
