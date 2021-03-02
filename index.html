@@ -7,6 +7,7 @@
 	<meta name="description" content="Documentation for @gebittencourt/sdk-jsddd">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
 </head>
 <body>
 <header>
@@ -40,8 +41,6 @@
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
 							<input type="checkbox" id="tsd-filter-externals" checked />
 							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -51,11 +50,6 @@
 	</div>
 	<div class="tsd-page-title">
 		<div class="container">
-			<ul class="tsd-breadcrumb">
-				<li>
-					<a href="globals.html">Globals</a>
-				</li>
-			</ul>
 			<h1>@gebittencourt/sdk-jsddd</h1>
 		</div>
 	</div>
@@ -79,7 +73,7 @@
 				<a href="#entidade" id="entidade" style="color: inherit; text-decoration: none;">
 					<h3>Entidade</h3>
 				</a>
-				<p>Classe abstrata que contém uma propriedade de identificação (<code>id</code>) com o validador <code>NotBlank</code> (não permitindo informação nula, indefinida ou vazia): <code>Entity</code>.</p>
+				<p>Classe abstrata que contém uma propriedade de identificação (<code>id</code>) com um tipo que deve ser indicado e com o validador <code>NotNull</code> (não permitindo informação nula ou indefinida): <code>Entity</code>.</p>
 				<a href="#evento-de-domínio" id="evento-de-domínio" style="color: inherit; text-decoration: none;">
 					<h3>Evento de domínio</h3>
 				</a>
@@ -130,86 +124,87 @@
 				<a href="#exemplo" id="exemplo" style="color: inherit; text-decoration: none;">
 					<h3>Exemplo</h3>
 				</a>
-				<pre><code class="language-typescript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Address</span> </span>{
-  <span class="hljs-meta">@NotBlank</span>()
-  <span class="hljs-attr">id</span>: <span class="hljs-built_in">string</span>;
+				<pre><code class="language-typescript"><span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">Address</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  @</span><span style="color: #795E26">NotBlank</span><span style="color: #000000">()</span>
+<span style="color: #000000">  </span><span style="color: #001080">id</span><span style="color: #000000">: </span><span style="color: #267F99">string</span><span style="color: #000000">;</span>
 
-  <span class="hljs-meta">@NotNull</span>({
-    <span class="hljs-attr">message</span>: <span class="hljs-string">&#x27;Situation must not be null.&#x27;</span>,
-  })
-  <span class="hljs-attr">situation</span>: Situation;
+<span style="color: #000000">  @</span><span style="color: #795E26">NotNull</span><span style="color: #000000">({</span>
+<span style="color: #000000">    </span><span style="color: #001080">message:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Situation must not be null.&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">  })</span>
+<span style="color: #000000">  </span><span style="color: #001080">situation</span><span style="color: #000000">: </span><span style="color: #267F99">Situation</span><span style="color: #000000">;</span>
 
-  <span class="hljs-meta">@Valid</span>()
-  <span class="hljs-attr">zipCode</span>: ZipCode;
+<span style="color: #000000">  @</span><span style="color: #795E26">Valid</span><span style="color: #000000">()</span>
+<span style="color: #000000">  </span><span style="color: #001080">zipCode</span><span style="color: #000000">: </span><span style="color: #267F99">ZipCode</span><span style="color: #000000">;</span>
 
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">id: <span class="hljs-built_in">string</span>, situation: Situation, zipCode: ZipCode</span>)</span> {
-    <span class="hljs-built_in">this</span>.id = id;
-    <span class="hljs-built_in">this</span>.situation = situation;
-    <span class="hljs-built_in">this</span>.zipCode = zipCode;
-    <span class="hljs-keyword">const</span> invalidConstraints = ConstraintValidation.validate(<span class="hljs-built_in">this</span>);
-    <span class="hljs-comment">// Você pode avaliar o resultado de `invalidConstraints` para lançar ou não uma exceção ou realizar outro tratamento...</span>
-  }
-}</code></pre>
+<span style="color: #000000">  </span><span style="color: #0000FF">constructor</span><span style="color: #000000">(</span><span style="color: #001080">id</span><span style="color: #000000">: </span><span style="color: #267F99">string</span><span style="color: #000000">, </span><span style="color: #001080">situation</span><span style="color: #000000">: </span><span style="color: #267F99">Situation</span><span style="color: #000000">, </span><span style="color: #001080">zipCode</span><span style="color: #000000">: </span><span style="color: #267F99">ZipCode</span><span style="color: #000000">) {</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">id</span><span style="color: #000000"> = </span><span style="color: #001080">id</span><span style="color: #000000">;</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">situation</span><span style="color: #000000"> = </span><span style="color: #001080">situation</span><span style="color: #000000">;</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">zipCode</span><span style="color: #000000"> = </span><span style="color: #001080">zipCode</span><span style="color: #000000">;</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">invalidConstraints</span><span style="color: #000000"> = </span><span style="color: #001080">ConstraintValidation</span><span style="color: #000000">.</span><span style="color: #795E26">validate</span><span style="color: #000000">(</span><span style="color: #0000FF">this</span><span style="color: #000000">);</span>
+<span style="color: #000000">    </span><span style="color: #008000">// Você pode avaliar o resultado de `invalidConstraints` para lançar ou não uma exceção ou realizar outro tratamento...</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">}</span>
+</code></pre>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
-					<li class="globals  ">
-						<a href="globals.html"><em>Globals</em></a>
+					<li class=" ">
+						<a href="modules.html">Exports</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/index.html">index</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/lib.html">lib</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/lib_domain.html">lib/domain</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/lib_domain_aggregate.html">lib/domain/aggregate</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/lib_domain_domain_event.html">lib/domain/domain-<wbr>event</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/lib_domain_entity.html">lib/domain/entity</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/lib_domain_value_object.html">lib/domain/value-<wbr>object</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/lib_validation.html">lib/validation</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/lib_validation_constraint.html">lib/validation/constraint</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/lib_validation_constraint_common.html">lib/validation/constraint/common</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/lib_validation_constraint_common_not_blank.html">lib/validation/constraint/common/not-<wbr>blank</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/lib_validation_constraint_common_not_null.html">lib/validation/constraint/common/not-<wbr>null</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/lib_validation_constraint_constraint.html">lib/validation/constraint/constraint</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/lib_validation_constraint_constraint_configuration.html">lib/validation/constraint/constraint-<wbr>configuration</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/lib_validation_constraint_constraint_validation.html">lib/validation/constraint/constraint-<wbr>validation</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/lib_validation_constraint_valid.html">lib/validation/constraint/valid</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class">
-						<a href="classes/aggregate.html" class="tsd-kind-icon">Aggregate</a>
-					</li>
-					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="classes/baseconstraint.html" class="tsd-kind-icon">Base<wbr>Constraint</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/constraintvalidation.html" class="tsd-kind-icon">Constraint<wbr>Validation</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/domainevent.html" class="tsd-kind-icon">Domain<wbr>Event</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/entity.html" class="tsd-kind-icon">Entity</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/notblankconstraint.html" class="tsd-kind-icon">Not<wbr>Blank<wbr>Constraint</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/notnullconstraint.html" class="tsd-kind-icon">Not<wbr>Null<wbr>Constraint</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/validproperty.html" class="tsd-kind-icon">Valid<wbr>Property</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="classes/valueobject.html" class="tsd-kind-icon">Value<wbr>Object</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="interfaces/constraint.html" class="tsd-kind-icon">Constraint</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/constraintconfiguration.html" class="tsd-kind-icon">Constraint<wbr>Configuration</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="globals.html#constraintdecorator" class="tsd-kind-icon">Constraint<wbr>Decorator</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="globals.html#listofconstraints" class="tsd-kind-icon">List<wbr>OfConstraints</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#notblank" class="tsd-kind-icon">Not<wbr>Blank</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#notnull" class="tsd-kind-icon">Not<wbr>Null</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#valid" class="tsd-kind-icon">Valid</a>
-					</li>
 				</ul>
 			</nav>
 		</div>
@@ -220,21 +215,16 @@
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
 			</ul>
 		</div>
 	</div>
