@@ -14,17 +14,19 @@ export class ConstraintValidation {
   static validate(object: Object): Constraint<ConstraintConfiguration>[] {
     const invalidConstraints: Constraint<ConstraintConfiguration>[] = [];
     const constraints: ListOfConstraints = object ? object['_constraints'] : [];
-    constraints?.forEach(
-      (constraint: Constraint<ConstraintConfiguration> | ValidProperty) => {
-        if (constraint instanceof ValidProperty) {
-          invalidConstraints.push(
-            ...ConstraintValidation.validate(object[constraint.propertyKey])
-          );
-        } else if (!constraint.validate(object)) {
-          invalidConstraints.push(constraint);
+    if (constraints) {
+      constraints.forEach(
+        (constraint: Constraint<ConstraintConfiguration> | ValidProperty) => {
+          if (constraint instanceof ValidProperty) {
+            invalidConstraints.push(
+              ...ConstraintValidation.validate(object[constraint.propertyKey])
+            );
+          } else if (!constraint.validate(object)) {
+            invalidConstraints.push(constraint);
+          }
         }
-      }
-    );
+      );
+    }
     return invalidConstraints;
   }
 }
