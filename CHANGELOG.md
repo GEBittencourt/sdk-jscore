@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/GEBittencourt/sdk-jsddd/compare/v0.0.2...v0.0.3) (2021-03-12)
+
+
+### Bug Fixes
+
+* **constraint-validation:** remove optional variable ([e3dffc7](https://github.com/GEBittencourt/sdk-jsddd/commit/e3dffc7209f4a5d088a84b927449c9a8b445f0c1))
+
 ### [0.0.2](https://github.com/GEBittencourt/sdk-jsddd/compare/v0.0.1...v0.0.2) (2021-03-02)
 
 
