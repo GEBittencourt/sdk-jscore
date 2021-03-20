@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/GEBittencourt/sdk-jsddd/compare/v0.0.3...v0.0.4) (2021-03-20)
+
+
+### Features
+
+* **query:** added query types and repository ([98e121f](https://github.com/GEBittencourt/sdk-jsddd/commit/98e121f15ba08901d6bb83dbacdaa8ab3033f51c))
+* **snippets:** added typescript snippets ([7077495](https://github.com/GEBittencourt/sdk-jsddd/commit/707749520a9aba574af3fa20c26a04a30d455e29))
+
+
+### Bug Fixes
+
+* **domain:** refactored classes ([1148fb3](https://github.com/GEBittencourt/sdk-jsddd/commit/1148fb3c991443121934f1ec6f999bd3fe735f2b))
+
 ### [0.0.3](https://github.com/GEBittencourt/sdk-jsddd/compare/v0.0.2...v0.0.3) (2021-03-12)
 
 
