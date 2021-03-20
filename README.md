@@ -22,6 +22,10 @@ Classe abstrata que contém uma propriedade abstrata forçando a indicação da 
 
 Classe abstrata apenas informativa que extende de uma entidade: `Aggregate`.
 
+### Repositório
+
+Classe abstrata apenas informativa: `DomainRepository`.
+
 ## Validações
 
 > <em>A principal razão para usar a validação no modelo é para verificar a exatidão de qualquer um atributo/propriedade, qualquer objeto inteiro ou qualquer composição de objetos. [Implementando Domain-Driven Design](https://books.google.com/books/about/Implementando_Domain_Driven_Design.html?id=zc9KvgAACAAJ&source=kp_book_description). </em>
@@ -66,3 +70,32 @@ class Address {
   }
 }
 ```
+
+## Abstrações de consulta
+
+Algumas abstrações estão disponíveis neste SDK, afim de facilitar o entendimento e implementação das classes de consulta.
+
+### Repositório
+
+Classe abstrata apenas informativa: `QueryRepository`.
+
+## Tipos para consulta
+
+A consulta de dados também necessita de alguns padrões e em relação a tipagem de dados de requisições e respostas, alguns _Types_ estão disponíveis neste pacote:
+
+### Parâmetros de paginação
+
+`PaginationParam` é o tipo que define os parâmetros de uma requisição em relação a paginação de dados, com as propriedades:
+
+- `page`: número da página desejada;
+- `pageSize`: quantidade de registros desejados;
+
+### Resposta de consulta de registros
+
+`GetAllResponse<DTO>` é o tipo que define a resposta de uma requisição com o objetivo de retornar um ou mais registros. Possui as seguintes propriedades:
+
+- `items`: lista de registros representados pelo tipo `DTO` indicado;
+- `hasNext`: indicativo se existe ou não uma próxima página;
+- `page`: número da página requisitada;
+- `pageSize`: quantidade de registros requisitados;
+- `length`: total de registros existentes;
