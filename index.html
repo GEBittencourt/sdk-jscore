@@ -82,6 +82,10 @@
 					<h3>Agregado</h3>
 				</a>
 				<p>Classe abstrata apenas informativa que extende de uma entidade: <code>Aggregate</code>.</p>
+				<a href="#repositório" id="repositório" style="color: inherit; text-decoration: none;">
+					<h3>Repositório</h3>
+				</a>
+				<p>Classe abstrata apenas informativa: <code>DomainRepository</code>.</p>
 				<a href="#validações" id="validações" style="color: inherit; text-decoration: none;">
 					<h2>Validações</h2>
 				</a>
@@ -145,6 +149,37 @@
 <span style="color: #000000">  }</span>
 <span style="color: #000000">}</span>
 </code></pre>
+				<a href="#abstrações-de-consulta" id="abstrações-de-consulta" style="color: inherit; text-decoration: none;">
+					<h2>Abstrações de consulta</h2>
+				</a>
+				<p>Algumas abstrações estão disponíveis neste SDK, afim de facilitar o entendimento e implementação das classes de consulta.</p>
+				<a href="#repositório-1" id="repositório-1" style="color: inherit; text-decoration: none;">
+					<h3>Repositório</h3>
+				</a>
+				<p>Classe abstrata apenas informativa: <code>QueryRepository</code>.</p>
+				<a href="#tipos-para-consulta" id="tipos-para-consulta" style="color: inherit; text-decoration: none;">
+					<h2>Tipos para consulta</h2>
+				</a>
+				<p>A consulta de dados também necessita de alguns padrões e em relação a tipagem de dados de requisições e respostas, alguns <em>Types</em> estão disponíveis neste pacote:</p>
+				<a href="#parâmetros-de-paginação" id="parâmetros-de-paginação" style="color: inherit; text-decoration: none;">
+					<h3>Parâmetros de paginação</h3>
+				</a>
+				<p><code>PaginationParam</code> é o tipo que define os parâmetros de uma requisição em relação a paginação de dados, com as propriedades:</p>
+				<ul>
+					<li><code>page</code>: número da página desejada;</li>
+					<li><code>pageSize</code>: quantidade de registros desejados;</li>
+				</ul>
+				<a href="#resposta-de-consulta-de-registros" id="resposta-de-consulta-de-registros" style="color: inherit; text-decoration: none;">
+					<h3>Resposta de consulta de registros</h3>
+				</a>
+				<p><code>GetAllResponse&lt;DTO&gt;</code> é o tipo que define a resposta de uma requisição com o objetivo de retornar um ou mais registros. Possui as seguintes propriedades:</p>
+				<ul>
+					<li><code>items</code>: lista de registros representados pelo tipo <code>DTO</code> indicado;</li>
+					<li><code>hasNext</code>: indicativo se existe ou não uma próxima página;</li>
+					<li><code>page</code>: número da página requisitada;</li>
+					<li><code>pageSize</code>: quantidade de registros requisitados;</li>
+					<li><code>length</code>: total de registros existentes;</li>
+				</ul>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -163,16 +198,49 @@
 						<a href="modules/lib_domain.html">lib/domain</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/lib_domain_aggregate.html">lib/domain/aggregate</a>
+						<a href="modules/lib_domain_model.html">lib/domain/model</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/lib_domain_domain_event.html">lib/domain/domain-<wbr>event</a>
+						<a href="modules/lib_domain_model_aggregate.html">lib/domain/model/aggregate</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/lib_domain_entity.html">lib/domain/entity</a>
+						<a href="modules/lib_domain_model_domain_event.html">lib/domain/model/domain-<wbr>event</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/lib_domain_value_object.html">lib/domain/value-<wbr>object</a>
+						<a href="modules/lib_domain_model_entity.html">lib/domain/model/entity</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/lib_domain_model_value_object.html">lib/domain/model/value-<wbr>object</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/lib_domain_repository.html">lib/domain/repository</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/lib_domain_repository_domain_repository.html">lib/domain/repository/domain-<wbr>repository</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/lib_exception.html">lib/exception</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/lib_exception_business_exception.html">lib/exception/business-<wbr>exception</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/lib_query.html">lib/query</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/lib_query_repository.html">lib/query/repository</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/lib_query_repository_query_repository.html">lib/query/repository/query-<wbr>repository</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/lib_query_type.html">lib/query/type</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/lib_query_type_get_all_response.html">lib/query/type/get-<wbr>all-<wbr>response</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/lib_query_type_pagination_param.html">lib/query/type/pagination-<wbr>param</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/lib_validation.html">lib/validation</a>
@@ -215,8 +283,10 @@
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
 				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>

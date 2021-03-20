@@ -104,7 +104,7 @@
 					<div class="tsd-signature tsd-kind-icon">message<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/GEBittencourt/sdk-jsddd/blob/e3dffc7/src/lib/validation/constraint/constraint-configuration.ts#L8">lib/validation/constraint/constraint-configuration.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/GEBittencourt/sdk-jsddd/blob/3075189/src/lib/validation/constraint/constraint-configuration.ts#L8">src/lib/validation/constraint/constraint-configuration.ts:8</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -124,51 +124,6 @@
 					<li class="current tsd-kind-module">
 						<a href="../modules/index.html">index</a>
 					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/lib.html">lib</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/lib_domain.html">lib/domain</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/lib_domain_aggregate.html">lib/domain/aggregate</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/lib_domain_domain_event.html">lib/domain/domain-<wbr>event</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/lib_domain_entity.html">lib/domain/entity</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/lib_domain_value_object.html">lib/domain/value-<wbr>object</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/lib_validation.html">lib/validation</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/lib_validation_constraint.html">lib/validation/constraint</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/lib_validation_constraint_common.html">lib/validation/constraint/common</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/lib_validation_constraint_common_not_blank.html">lib/validation/constraint/common/not-<wbr>blank</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/lib_validation_constraint_common_not_null.html">lib/validation/constraint/common/not-<wbr>null</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/lib_validation_constraint_constraint.html">lib/validation/constraint/constraint</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/lib_validation_constraint_constraint_configuration.html">lib/validation/constraint/constraint-<wbr>configuration</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/lib_validation_constraint_constraint_validation.html">lib/validation/constraint/constraint-<wbr>validation</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/lib_validation_constraint_valid.html">lib/validation/constraint/valid</a>
-					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
@@ -178,6 +133,9 @@
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
 						<a href="../classes/index.baseconstraint.html" class="tsd-kind-icon">Base<wbr>Constraint</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/index.businessexception.html" class="tsd-kind-icon">Business<wbr>Exception</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="../classes/index.constraintvalidation.html" class="tsd-kind-icon">Constraint<wbr>Validation</a>
@@ -193,6 +151,9 @@
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="../classes/index.notnullconstraint.html" class="tsd-kind-icon">Not<wbr>Null<wbr>Constraint</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/index.queryrepository.html" class="tsd-kind-icon">Query<wbr>Repository</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="../classes/index.validproperty.html" class="tsd-kind-icon">Valid<wbr>Property</a>
@@ -218,8 +179,17 @@
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
 						<a href="../modules/index.html#constraintdecorator" class="tsd-kind-icon">Constraint<wbr>Decorator</a>
 					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="../modules/index.html#getallresponse" class="tsd-kind-icon">Get<wbr>All<wbr>Response</a>
+					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
 						<a href="../modules/index.html#listofconstraints" class="tsd-kind-icon">List<wbr>OfConstraints</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="../modules/index.html#paginationparam" class="tsd-kind-icon">Pagination<wbr>Param</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="../modules/index.html#defaultpaginationparam" class="tsd-kind-icon">default<wbr>Pagination<wbr>Param</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="../modules/index.html#notblank" class="tsd-kind-icon">Not<wbr>Blank</a>
@@ -240,13 +210,15 @@
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
 				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
 				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
 				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
-				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>

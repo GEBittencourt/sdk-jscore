@@ -74,11 +74,13 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter"><a href="../classes/lib.aggregate.html" class="tsd-kind-icon">Aggregate</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter"><a href="../classes/lib.baseconstraint.html" class="tsd-kind-icon">Base<wbr>Constraint</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/lib.businessexception.html" class="tsd-kind-icon">Business<wbr>Exception</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/lib.constraintvalidation.html" class="tsd-kind-icon">Constraint<wbr>Validation</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/lib.domainevent.html" class="tsd-kind-icon">Domain<wbr>Event</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter"><a href="../classes/lib.entity.html" class="tsd-kind-icon">Entity</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/lib.notblankconstraint.html" class="tsd-kind-icon">Not<wbr>Blank<wbr>Constraint</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/lib.notnullconstraint.html" class="tsd-kind-icon">Not<wbr>Null<wbr>Constraint</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/lib.queryrepository.html" class="tsd-kind-icon">Query<wbr>Repository</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/lib.validproperty.html" class="tsd-kind-icon">Valid<wbr>Property</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/lib.valueobject.html" class="tsd-kind-icon">Value<wbr>Object</a></li>
 							</ul>
@@ -94,7 +96,15 @@
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="lib.html#constraintdecorator" class="tsd-kind-icon">Constraint<wbr>Decorator</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter"><a href="lib.html#getallresponse" class="tsd-kind-icon">Get<wbr>All<wbr>Response</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="lib.html#listofconstraints" class="tsd-kind-icon">List<wbr>OfConstraints</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="lib.html#paginationparam" class="tsd-kind-icon">Pagination<wbr>Param</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Variables</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="lib.html#defaultpaginationparam" class="tsd-kind-icon">default<wbr>Pagination<wbr>Param</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -116,7 +126,7 @@
 					<div class="tsd-signature tsd-kind-icon">Constraint<wbr>Decorator<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>configuration<span class="tsd-signature-symbol">?: </span><a href="../interfaces/lib_validation_constraint_constraint_configuration.constraintconfiguration.html" class="tsd-signature-type" data-tsd-kind="Interface">ConstraintConfiguration</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">PropertyDecorator</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/GEBittencourt/sdk-jsddd/blob/e3dffc7/src/lib/validation/constraint/constraint.ts#L8">lib/validation/constraint/constraint.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/GEBittencourt/sdk-jsddd/blob/3075189/src/lib/validation/constraint/constraint.ts#L8">src/lib/validation/constraint/constraint.ts:8</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -146,18 +156,138 @@
 						</ul>
 					</div>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
+					<a name="getallresponse" class="tsd-anchor"></a>
+					<h3>Get<wbr>All<wbr>Response</h3>
+					<div class="tsd-signature tsd-kind-icon">Get<wbr>All<wbr>Response&lt;DTO&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>hasNext<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>items<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">DTO</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>length<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>page<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>pageSize<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/GEBittencourt/sdk-jsddd/blob/3075189/src/lib/query/type/get-all-response.ts#L4">src/lib/query/type/get-all-response.ts:4</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Definition of get all response</p>
+						</div>
+					</div>
+					<h4 class="tsd-type-parameters-title">Type parameters</h4>
+					<ul class="tsd-type-parameters">
+						<li>
+							<h4>DTO</h4>
+						</li>
+					</ul>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>has<wbr>Next<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Show if next page exists</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5>items<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">DTO</span><span class="tsd-signature-symbol">[]</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>List of DTO (Data transfer object)</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> length<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Total existing data</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5>page<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Number of page returned</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5>page<wbr>Size<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Quantity of page records requested</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
 					<a name="listofconstraints" class="tsd-anchor"></a>
 					<h3>List<wbr>OfConstraints</h3>
 					<div class="tsd-signature tsd-kind-icon">List<wbr>OfConstraints<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><a href="../interfaces/lib_validation_constraint_constraint.constraint.html" class="tsd-signature-type" data-tsd-kind="Interface">Constraint</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/lib_validation_constraint_constraint_configuration.constraintconfiguration.html" class="tsd-signature-type" data-tsd-kind="Interface">ConstraintConfiguration</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="../classes/lib_validation_constraint_valid.validproperty.html" class="tsd-signature-type" data-tsd-kind="Class">ValidProperty</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/GEBittencourt/sdk-jsddd/blob/e3dffc7/src/lib/validation/constraint/constraint.ts#L15">lib/validation/constraint/constraint.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/GEBittencourt/sdk-jsddd/blob/3075189/src/lib/validation/constraint/constraint.ts#L15">src/lib/validation/constraint/constraint.ts:15</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>List of object constraints</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="paginationparam" class="tsd-anchor"></a>
+					<h3>Pagination<wbr>Param</h3>
+					<div class="tsd-signature tsd-kind-icon">Pagination<wbr>Param<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>page<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>pageSize<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/GEBittencourt/sdk-jsddd/blob/3075189/src/lib/query/type/pagination-param.ts#L4">src/lib/query/type/pagination-param.ts:4</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Definition of pagination parameters</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>page<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Number of page requested</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5>page<wbr>Size<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Quantity of page records requested</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Variables</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
+					<a name="defaultpaginationparam" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> default<wbr>Pagination<wbr>Param</h3>
+					<div class="tsd-signature tsd-kind-icon">default<wbr>Pagination<wbr>Param<span class="tsd-signature-symbol">:</span> <a href="lib_query_type_pagination_param.html#paginationparam" class="tsd-signature-type" data-tsd-kind="Type alias">PaginationParam</a><span class="tsd-signature-symbol"> = ...</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/GEBittencourt/sdk-jsddd/blob/3075189/src/lib/query/type/pagination-param.ts#L19">src/lib/query/type/pagination-param.ts:19</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Default value for pagination parameters</p>
 						</div>
 					</div>
 				</section>
@@ -174,7 +304,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/GEBittencourt/sdk-jsddd/blob/e3dffc7/src/lib/validation/constraint/common/not-blank.ts#L11">lib/validation/constraint/common/not-blank.ts:11</a></li>
+									<li>Defined in <a href="https://github.com/GEBittencourt/sdk-jsddd/blob/3075189/src/lib/validation/constraint/common/not-blank.ts#L11">src/lib/validation/constraint/common/not-blank.ts:11</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -206,7 +336,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/GEBittencourt/sdk-jsddd/blob/e3dffc7/src/lib/validation/constraint/common/not-null.ts#L10">lib/validation/constraint/common/not-null.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/GEBittencourt/sdk-jsddd/blob/3075189/src/lib/validation/constraint/common/not-null.ts#L10">src/lib/validation/constraint/common/not-null.ts:10</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -237,7 +367,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/GEBittencourt/sdk-jsddd/blob/e3dffc7/src/lib/validation/constraint/valid.ts#L7">lib/validation/constraint/valid.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/GEBittencourt/sdk-jsddd/blob/3075189/src/lib/validation/constraint/valid.ts#L7">src/lib/validation/constraint/valid.ts:7</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -257,53 +387,8 @@
 					<li class=" ">
 						<a href="../modules.html">Exports</a>
 					</li>
-					<li class=" tsd-kind-module">
-						<a href="index.html">index</a>
-					</li>
 					<li class="current tsd-kind-module">
 						<a href="lib.html">lib</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="lib_domain.html">lib/domain</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="lib_domain_aggregate.html">lib/domain/aggregate</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="lib_domain_domain_event.html">lib/domain/domain-<wbr>event</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="lib_domain_entity.html">lib/domain/entity</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="lib_domain_value_object.html">lib/domain/value-<wbr>object</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="lib_validation.html">lib/validation</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="lib_validation_constraint.html">lib/validation/constraint</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="lib_validation_constraint_common.html">lib/validation/constraint/common</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="lib_validation_constraint_common_not_blank.html">lib/validation/constraint/common/not-<wbr>blank</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="lib_validation_constraint_common_not_null.html">lib/validation/constraint/common/not-<wbr>null</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="lib_validation_constraint_constraint.html">lib/validation/constraint/constraint</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="lib_validation_constraint_constraint_configuration.html">lib/validation/constraint/constraint-<wbr>configuration</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="lib_validation_constraint_constraint_validation.html">lib/validation/constraint/constraint-<wbr>validation</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="lib_validation_constraint_valid.html">lib/validation/constraint/valid</a>
 					</li>
 				</ul>
 			</nav>
@@ -314,6 +399,9 @@
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
 						<a href="../classes/lib.baseconstraint.html" class="tsd-kind-icon">Base<wbr>Constraint</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/lib.businessexception.html" class="tsd-kind-icon">Business<wbr>Exception</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="../classes/lib.constraintvalidation.html" class="tsd-kind-icon">Constraint<wbr>Validation</a>
@@ -331,6 +419,9 @@
 						<a href="../classes/lib.notnullconstraint.html" class="tsd-kind-icon">Not<wbr>Null<wbr>Constraint</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/lib.queryrepository.html" class="tsd-kind-icon">Query<wbr>Repository</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="../classes/lib.validproperty.html" class="tsd-kind-icon">Valid<wbr>Property</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-module">
@@ -345,8 +436,17 @@
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
 						<a href="lib.html#constraintdecorator" class="tsd-kind-icon">Constraint<wbr>Decorator</a>
 					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="lib.html#getallresponse" class="tsd-kind-icon">Get<wbr>All<wbr>Response</a>
+					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
 						<a href="lib.html#listofconstraints" class="tsd-kind-icon">List<wbr>OfConstraints</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="lib.html#paginationparam" class="tsd-kind-icon">Pagination<wbr>Param</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="lib.html#defaultpaginationparam" class="tsd-kind-icon">default<wbr>Pagination<wbr>Param</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="lib.html#notblank" class="tsd-kind-icon">Not<wbr>Blank</a>
@@ -367,8 +467,10 @@
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
 				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
