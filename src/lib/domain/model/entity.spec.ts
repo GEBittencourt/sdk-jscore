@@ -1,5 +1,5 @@
 import test from 'ava';
-import { ConstraintValidation, NotNullConstraint } from '../validation';
+import { ConstraintValidation, NotNullConstraint } from '../../validation';
 import { Entity } from './entity';
 
 class EntityClass extends Entity<string> {

@@ -1,4 +1,4 @@
-import { NotNull } from '../validation';
+import { NotNull } from '../../validation';
 
 /**
  * Represents a domain entity with identity
