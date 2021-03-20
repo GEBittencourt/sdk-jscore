@@ -108,5 +108,13 @@
     "url": "https://github.com/GEBittencourt/sdk-jsddd/issues"
   },
   "homepage": "https://github.com/GEBittencourt/sdk-jsddd#readme",
-  "author": "Guilherme Eduardo Bittencourt"
+  "author": "Guilherme Eduardo Bittencourt",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescript",
+        "path": "./typescript.code-snippets"
+      }
+    ]
+  }
 }
