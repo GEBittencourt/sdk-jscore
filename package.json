@@ -76,7 +76,8 @@
     "!**/*.json",
     "CHANGELOG.md",
     "LICENSE",
-    "README.md"
+    "README.md",
+    "typescript.code-snippets"
   ],
   "ava": {
     "failFast": true,
@@ -116,5 +117,6 @@
         "path": "./typescript.code-snippets"
       }
     ]
-  }
+  },
+  "categories": ["Snippets"]
 }
