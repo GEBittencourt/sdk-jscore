@@ -77,7 +77,7 @@
     "CHANGELOG.md",
     "LICENSE",
     "README.md",
-    "typescript.code-snippets"
+    "snippets/tsddd-snippet-0.0.1.vsix"
   ],
   "ava": {
     "failFast": true,
@@ -109,16 +109,5 @@
     "url": "https://github.com/GEBittencourt/sdk-jsddd/issues"
   },
   "homepage": "https://github.com/GEBittencourt/sdk-jsddd#readme",
-  "author": "Guilherme Eduardo Bittencourt",
-  "contributes": {
-    "snippets": [
-      {
-        "language": "typescript",
-        "path": "./typescript.code-snippets"
-      }
-    ]
-  },
-  "categories": [
-    "Snippets"
-  ]
+  "author": "Guilherme Eduardo Bittencourt"
 }

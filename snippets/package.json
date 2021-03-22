@@ -1,0 +1,25 @@
+{
+  "name": "tsddd-snippet",
+  "displayName": "TS DDD Snippets",
+  "publisher": "tsddd-snippet",
+  "description": "Typescript snippets for projects with @gebittencourt/sdk-jsddd dependency",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.32.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GEBittencourt/sdk-jsddd.git"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescript",
+        "path": "./snippets.json"
+      }
+    ]
+  }
+}
