@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/GEBittencourt/sdk-jsddd/compare/v0.0.5...v0.0.6) (2021-03-22)
+
+
+### Bug Fixes
+
+* **snippets:** fix snippets configuration ([b72e6f6](https://github.com/GEBittencourt/sdk-jsddd/commit/b72e6f69d3bae2567147bdfe16daf9553070cfd2))
+
 ### [0.0.5](https://github.com/GEBittencourt/sdk-jsddd/compare/v0.0.4...v0.0.5) (2021-03-22)
 
 
