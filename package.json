@@ -1,6 +1,6 @@
 {
   "name": "@gebittencourt/sdk-jsddd",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Conjunto de utilitários para aplicações javascript com abordagens de Domain-Driven Design.",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",

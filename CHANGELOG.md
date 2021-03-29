@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/GEBittencourt/sdk-jsddd/compare/v0.0.6...v0.0.7) (2021-03-29)
+
+
+### Features
+
+* **constraint-error:** added error custom type ([80a3591](https://github.com/GEBittencourt/sdk-jsddd/commit/80a35910e97c40d66a633c926d4e19ea8eecc016))
+
 ### [0.0.6](https://github.com/GEBittencourt/sdk-jsddd/compare/v0.0.5...v0.0.6) (2021-03-22)
 
 
