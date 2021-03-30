@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.8](https://github.com/GEBittencourt/sdk-jsddd/compare/v0.0.7...v0.0.8) (2021-03-30)
+
+
+### Bug Fixes
+
+* **entity.ts:** added @Valid to id property ([c47586f](https://github.com/GEBittencourt/sdk-jsddd/commit/c47586fc6c30fce7a08aea4381f5c62117d55c8d))
+
 ### [0.0.7](https://github.com/GEBittencourt/sdk-jsddd/compare/v0.0.6...v0.0.7) (2021-03-29)
 
 
