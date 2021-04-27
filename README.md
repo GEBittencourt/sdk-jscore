@@ -99,3 +99,56 @@ A consulta de dados também necessita de alguns padrões e em relação a tipage
 - `page`: número da página requisitada;
 - `pageSize`: quantidade de registros requisitados;
 - `length`: total de registros existentes;
+
+### Filtro (Campo/Valor)
+
+`FieldValue<ValueType>` é o tipo que define um filtro para ser aplicado em uma consulta. Possui as seguintes propriedades:
+
+- `field`: campo relacionado ao filtro;
+- `value`: valor para o filtro;
+
+## Utilitários
+
+Para facilitar o desenvolvimento provendo uma _sintaxe_ mais eficiente, são disponibilizados alguns facilitadores:
+
+### Construtor de filtros
+
+`FilterBuilder` é um utilitário para definição de filtros com uma _sintaxe_ fluída, conforme o exemplo:
+
+```typescript
+const filters = FilterBuilder.where<string>({
+  field: 'fieldA',
+  value: 'valueA',
+})
+  .or<number>({
+    field: 'fieldB',
+    value: 10,
+  })
+  .and<Date>({
+    field: 'fieldC',
+    value: new Date(),
+  })
+  .and<string>({
+    field: 'fieldD',
+    value: 'valueD',
+  })
+  .or<string>({
+    field: 'fieldE',
+    value: 'valueE',
+  })
+  .build();
+
+// Filters possuirá uma lista de `FieldValue`
+// Para os operadores AND e OR, o field será igual a {{OPERATOR}} e
+// o value será respectivamente AND ou OR
+
+// [{ field: 'fieldA'      , value: 'valueA'   }]
+// [{ field: '{{OPERATOR}}', value: 'OR'       }]
+// [{ field: 'fieldB'      , value: 10         }]
+// [{ field: '{{OPERATOR}}', value: 'AND'      }]
+// [{ field: 'fieldC'      , value: new Date() }]
+// [{ field: '{{OPERATOR}}', value: 'AND'      }]
+// [{ field: 'fieldD'      , value: 'valueD'   }]
+// [{ field: '{{OPERATOR}}', value: 'OR'       }]
+// [{ field: 'fieldE'      , value: 'valueE'   }]
+```
