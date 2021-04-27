@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.9](https://github.com/GEBittencourt/sdk-jsddd/compare/v0.0.8...v0.0.9) (2021-04-27)
+
+
+### Features
+
+* **filter-builder:** added utility to build filters ([e816868](https://github.com/GEBittencourt/sdk-jsddd/commit/e816868ba901d5cf0e3b853aeb886c8fc8b9349f))
+* **get-all-paginator:** added utility to manage a search ([fcacc80](https://github.com/GEBittencourt/sdk-jsddd/commit/fcacc8043c64331ab18fb8930b4d9d75b4a7e578))
+
 ### [0.0.8](https://github.com/GEBittencourt/sdk-jsddd/compare/v0.0.7...v0.0.8) (2021-03-30)
 
 
