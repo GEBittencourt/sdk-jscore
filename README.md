@@ -152,3 +152,25 @@ const filters = FilterBuilder.where<string>({
 // [{ field: '{{OPERATOR}}', value: 'OR'       }]
 // [{ field: 'fieldE'      , value: 'valueE'   }]
 ```
+
+### Paginador para consulta de registros
+
+`GetAllPaginator<Entity>` é uma classe que gerencia o carregamento dos dados paginados, utilizando um serviço que implementa a _interface_ `GetAllPaginationService<Entity>`. Mantém o estado da consulta.
+
+| Propriedade       | Objetivo                                                                            |
+| ----------------- | ----------------------------------------------------------------------------------- |
+| itemsObservable   | Observable emitido quando os dados são alterados                                    |
+| loadingObservable | Observable emitido quando há alteração no modo de carregamento                      |
+| filters           | Define os filtros que deverão ser aplicados na consulta                             |
+| orderBy           | Define a ordenação que deverá ser aplicada na consulta                              |
+| page              | Retorna o número da página atual                                                    |
+| pageSize          | Retorna o número que indica a quantidade de registros a serem carregados por página |
+| items             | Lista com os dados já carregados                                                    |
+| hasNext           | Indica se a consulta possui uma próxima página                                      |
+| length            | Quantidade total de registros não considerando a paginação                          |
+
+| Método     | Objetivo                                       |
+| ---------- | ---------------------------------------------- |
+| getAll     | Busca os dados da primeira página              |
+| more       | Busca os dados da próxima página               |
+| deleteItem | Remove um item da lista de dados já retornados |
