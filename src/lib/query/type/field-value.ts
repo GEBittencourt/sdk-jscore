@@ -10,4 +10,8 @@ export type FieldValue<ValueType> = {
    * Filter value
    */
   value: ValueType;
+  /**
+   * Operador de igualdade
+   */
+  operator?: 'eq' | 'contains';
 };

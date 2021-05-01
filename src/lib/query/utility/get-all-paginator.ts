@@ -1,10 +1,19 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { BehaviorSubject, Observable, Subscriber } from 'rxjs';
 import { GetAllPaginationService } from '../interface/get-all-pagination-service';
 import { FieldValue } from '../type';
 import { GetAllResponse } from '../type/get-all-response';
 
 export class GetAllPaginator<Entity> {
+  static of<Entity>(
+    service: GetAllPaginationService<Entity>,
+    page = 1,
+    pageSize = 10
+  ): GetAllPaginator<Entity> {
+    return new GetAllPaginator(service, page, pageSize);
+  }
+
   readonly itemsObservable: BehaviorSubject<Entity[]> = new BehaviorSubject(
     this.items
   );
@@ -41,7 +50,7 @@ export class GetAllPaginator<Entity> {
     return this.lengthValue;
   }
 
-  constructor(
+  private constructor(
     private readonly service: GetAllPaginationService<Entity>,
     page = 1,
     pageSize = 10
@@ -67,6 +76,10 @@ export class GetAllPaginator<Entity> {
     this.itemsValue.splice(index, 1);
     this.itemsObservable.next(this.items);
     this.lengthValue = this.lengthValue ? this.lengthValue - 1 : 0;
+  }
+
+  clearFilter(): void {
+    this.filters.splice(0, this.filters.length);
   }
 
   private search(): Observable<GetAllResponse<Entity>> {
