@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.10](https://github.com/GEBittencourt/sdk-jsddd/compare/v0.0.9...v0.0.10) (2021-05-01)
+
+
+### Bug Fixes
+
+* **get-all-paginator:** added builder ([8b09587](https://github.com/GEBittencourt/sdk-jsddd/commit/8b0958750ecd6ca3c5b016b4a0e70eb5066809c1))
+
 ### [0.0.9](https://github.com/GEBittencourt/sdk-jsddd/compare/v0.0.8...v0.0.9) (2021-04-27)
 
 
